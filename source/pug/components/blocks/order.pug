@@ -1,0 +1,90 @@
+mixin order()
+  .make.order-block#order
+    section.make__wrapper
+      //- вставлять блоки во внешний контейнер неверно
+      //- все блоки содержат в себе container без доп класса tutorial__wrapper
+      .container
+        h2.title-h2.make__title Как сделать заказ
+        .make__box
+          .make__column
+            h3.title-h3.make__title-2
+              +icon("icon-map-marker", 24, 24)
+              | Приехать в мастерскую
+            .make__inner
+              p.make__text-element
+                strong Режим работы:
+                span Пн.-Сб. с 12-00 до 19-00
+                span Вс. Выходной
+              p.make__text-element
+                strong Адрес:
+                span г.Тюмень, ул.Холодильная д.69
+              a.link(href="#contacts", data-smooth="scroll") Схема проезда
+
+          .make__column.contacts
+            h3.title-h3.make__title-2
+              +icon("icon-phone", 24, 24)
+              | По телефону
+            .make__inner
+              p.make__text-element Позвонить нам по телефону и сформировать заказ вместе с мастером
+                span * заранее ознакомьтесь с разделом
+                  a.link(href="#materials", data-smooth="scroll") Материалы
+                span ** заказ будет передан в работу после оплаты
+              ul.contacts__list
+                li.contacts__item
+                  a.contacts__link.link(href="tel:+73452971979") +7 (3452) 971-979 Тюмень
+                li.contacts__item
+                  a.contacts__link.link(href="tel:+79094971979") +7 (9044) 971-979 Регионы
+
+    section.make__wrapper
+      .container
+        h2.title-h2.make__title Как оплатить заказ
+        .make__box
+          .make__column
+            h3.title-h3.make__title-2
+              +icon("icon-bag", 24, 24)
+              | При заказе в мастерской
+            .make__inner
+              p.make__text-element Оплата производится после составления заказ-наряда
+                span * наличный расчет
+                span ** оплата банковской картой
+          .make__column
+            h3.title-h3.make__title-2
+              +icon("icon-phone", 24, 24)
+              | При заказе по телефону
+            .make__inner
+              p.make__text-element Оплата производится удаленно
+                span * оплата переводом на банковскую карту
+
+    section.make__wrapper
+      .container
+        h2.title-h2.make__title Доставка
+        .make__box
+          .make__column
+            h3.title-h3.make__title-2
+              +icon("icon-user-profile", 24, 24)
+              | Забрать самостоятельно
+            .make__inner
+              p.make__text-element Забрать готовый заказ можно в мастерской в рабочее время по адресу:
+                span г.Тюмень, ул.Холодильная д.69
+              a.link(href="#contacts", data-smooth="scroll") Схема проезда
+          .make__column
+            h3.title-h3.make__title-2
+              +icon("icon-rocket", 24, 24)
+              | Заказать доставку
+            .make__inner
+              p.make__text-element
+                span Доставка производится после 20:00 в будни
+                span Стоимость доставки по городу Тюмень составит 400руб
+          .make__column.contacts
+            h3.title-h3.make__title-2
+              +icon("icon-delivery", 24, 24)
+              | Заказать доставку
+            .make__inner
+              p.make__text-element
+                span Доставки в другие города осуществляется с помощью Транспортных компаний
+                span Оплата их услуг происходит при получении товара в вашем городе
+              ul.contacts__list
+                li.contacts__item
+                  a.contacts__link.link(href="tel:+73452971979") +7 (3452) 971-979 Тюмень
+                li.contacts__item
+                  a.contacts__link.link(href="tel:+79094971979") +7 (9044) 971-979 Регионы

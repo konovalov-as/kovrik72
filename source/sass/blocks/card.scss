@@ -1,0 +1,68 @@
+.card {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    background-color: $color-default-white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba($color-default-black, 10%);
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: 12px;
+    height: 290px;
+    background-color: lightgrey;
+
+    & img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 10px 20px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 1.1;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.1;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-top: auto;
+    margin-left: auto;
+    width: auto;
+    text-transform: none;
+  }
+}

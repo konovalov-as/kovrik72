@@ -1,0 +1,38 @@
+mixin intro()
+  section.intro
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      .intro__wrapper
+        h1.title-h1.intro__title Пошив автоковриков на&nbsp;заказ
+        ul.intro__contacts-list
+          li.intro__contacts-item
+            a.intro__contacts-link(href="tel:+73452971979") +7 (3452) 971-979
+            span.intro__contacts-label Тюмень
+          li.intro__contacts-item
+            a.intro__contacts-link(href="tel:+79094971979") +7 (9044) 971-979
+            span.intro__contacts-label Регионы
+          li.intro__contacts-item
+            span.intro__contacts-text г.Тюмень ул.Холодильная д.69
+            a.intro__contacts-link-2(href="#contacts", data-smooth="scroll") Схема проезда
+        p.intro__text ПН-СБ 12:00 - 19:00 / ВC Выходной
+
+        ul.intro__price-list
+          li.intro__price-item
+            a.intro__price-link(href="#material-optima", data-price-tabs="price-link") Ворсовые коврики «Оптима»
+            span.intro__price-text 8600₽
+          li.intro__price-item
+            a.intro__price-link(href="#material-prem", data-price-tabs="price-link") Ворсовые коврики «Премиум»
+            span.intro__price-text 12800₽
+          li.intro__price-item
+            a.intro__price-link(href="#material-eva", data-price-tabs="price-link") Коврики EVA-MAT
+            span.intro__price-text 3300₽
+          li.intro__price-item
+            a.intro__price-link(href="#material-std", data-price-tabs="price-link") Ворсовые коврики «Стандарт»
+            span.intro__price-text 3300₽
+          li.intro__price-item
+            a.intro__price-link(href="#material-poly", data-price-tabs="price-link") Полиуретановые коврики
+            span.intro__price-text ****₽
+
+    .intro__mask
+      +icon("icon-intro-mask", auto, auto)

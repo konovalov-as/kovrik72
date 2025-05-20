@@ -1,0 +1,64 @@
+mixin faq()
+  section#faq.faq.faq--padding(data-tabs='element1')
+    .faq__wrapper
+      .container
+        h2.title-h2.faq__title.subtitle Вопрос и ответ
+        .accordion(data-accordion="parent")
+          .accordion__element.faq__accordion-element(data-accordion="element")
+            button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+              +icon("icon-chevron-right", 24, 24)
+              | Есть ли у Вас материалы, которые можно использовать круглый год?
+            .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+              .accordion__wrapper
+                p Да, все материалы подходят для круглогодичной эксплуатации и не пропускают влагу.
+          .accordion__element.faq__accordion-element(data-accordion="element")
+            button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+              +icon("icon-chevron-right", 24, 24)
+              | Как быстро изготавливаются коврики?
+            .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+              .accordion__wrapper
+                p Все авто коврики изготавливаются в течение одного — двух рабочих дней.
+          .accordion__element.faq__accordion-element(data-accordion="element")
+            button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+              +icon("icon-chevron-right", 24, 24)
+              | Вы используете оригинальные лекала?
+            .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+              .accordion__wrapper
+                p Все лекала, которые мы используем, мы изготавливаем самостоятельно, как правило, после изучения достоинств и недостатков родных ковров. Обычно, наши ковры получаются больше родных и лучше подогнаны по размерам.
+          .accordion__element.faq__accordion-element(data-accordion="element")
+            button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+              +icon("icon-chevron-right", 24, 24)
+              | Работаете ли Вы по выходным?
+            .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+              .accordion__wrapper
+                p Мастерская работает в субботу с 12:00 до 18:00. Воскресенье — выходной.
+          .accordion__element.faq__accordion-element(data-accordion="element")
+            button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+              +icon("icon-chevron-right", 24, 24)
+              | Как чистить ковры?
+            .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+              .accordion__wrapper
+                p Возможна как сухая чистка, при помощи щетки или пылесоса, так и влажная. Если ковер очень сильно загрязнился, то его можно промыть струей воды под давлением.
+                p На вопрос можно ли при этом использовать моющее средство, используемое при бесконтактной мойке автомобиля, однозначного ответа нет. По крайней мере, об отрицательных отзывах после таких моек мы не слышали.
+                p В любом случае после мойки необходимо по максимуму удалить воду из ковра. На мойке это можно сделать при помощи пылесоса или путем «огона» воды с вертикально расположенного ковра. Не рекомендуется сильно выбивать ковры, т.к. это может привести к повреждению его основы.
+          .accordion__element.faq__accordion-element(data-accordion="element")
+            button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+              +icon("icon-chevron-right", 24, 24)
+              | А так ли нужен ковер в багажник?
+            .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+              .accordion__wrapper
+                p На этот вопрос Вы можете ответить только сами. Мы приведем только несколько соображений:
+                ul
+                  li Родное покрытие багажника останется чистым, что положительно скажется на цене машины при последующей ее продаже. Вы же не планируете на ней ездить вечно?
+                  li Представим следующую ситуацию. Вы из супермаркета везете в багажнике одновременно продукты и вещи. Предположим, у Вас протекс какой-нибудь напиток. Что произойдет в случае отсутствия ковра, думаем, рассказывать не нужно.
+                p В багажник мы рекомендуем ковры из полиуретана.
+          .accordion__element.faq__accordion-element(data-accordion="element")
+            button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+              +icon("icon-chevron-right", 24, 24)
+              | Как долго служат ваши ковры?
+            .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+              .accordion__wrapper
+                p Срок службы ковров очень сильно зависит от условий, в которых они эксплуатируются и от ухода, который они получают.
+                p Средний срок службы водительского ковра (а он изнашивается интенсивнее всех) 40-50 тыс. км.
+                p При необходимости Вы можете изготовить у нас или отдельно водительский ковер, или целиком новый комплект, ведь уют в салоне автомобиля зависит, в том числе и от того, что у Вас под ногами.
+                p Цена же нового комплекта ковров, как правило, сравнима с ценой бака бензина. Строго говоря, ковры должны рассматриваться как расходный материал, как, например, салонный фильтр.

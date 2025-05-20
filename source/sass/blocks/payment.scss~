@@ -1,0 +1,147 @@
+.payment {
+  //background-color: $color-pale-cornflower-blue;
+
+  &__wrapper {
+    //height: 700px;
+    //padding: 50px 0;
+    padding-bottom: 20px;
+
+  }
+
+  &__column {
+    width: 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.payment-section {
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.payment-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.method {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid #3498db;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.method:nth-child(1) { animation-delay: 0.3s; }
+.method:nth-child(2) { animation-delay: 0.5s; }
+
+
+.method:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.method-title {
+  color: #3498db;
+  font-size: 22px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.method-title svg {
+  width: 24px;
+  height: 24px;
+  fill: #3498db;
+}
+
+.method-description {
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.payment-options {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-options li {
+  padding: 10px 0;
+  padding-left: 35px;
+  position: relative;
+  color: #333;
+  font-size: 16px;
+}
+
+.payment-options li::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233498db'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .payment-methods {
+    flex-direction: column;
+  }
+}

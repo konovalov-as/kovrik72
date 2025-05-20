@@ -1,0 +1,88 @@
+.make {
+  background-color: $color-white-smoke;
+
+  &__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &:last-child {
+      & .make__box {
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    @include vp-767 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $color-silver;
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      right: 0;
+    }
+
+    @include vp-767 {
+      display: block;
+      gap: 0;
+    }
+  }
+
+  &__inner {
+    padding-left: 43px;
+  }
+
+  &__column {
+    width: 50%;
+
+    @include vp-767 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {}
+
+  &__title-2 {
+    display: flex;
+    align-items: center;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 20px;
+    }
+  }
+
+  &__text-element {
+    margin: 0;
+    margin-bottom: 10px;
+
+    & span {
+      color: $color-night-rider;
+      display: block;
+
+      & a {
+        margin-left: 4px;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

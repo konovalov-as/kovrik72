@@ -1,0 +1,41 @@
+mixin contacts()
+  section.contacts#contacts.contacts-section.contacts--type-1
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.title-h2.contacts-title Контакты
+      .contacts__box
+        .contacts__column.contacts__data-column
+          .contacts__inner
+            +icon("icon-time", 24, 24)
+            ul.contacts__list
+              li.contacts__item
+                p.contacts__text пн-сб 12:00-19:00
+              li.contacts__item
+                p.contacts__text вс Выходной
+          .contacts__inner
+            +icon("icon-headset", 24, 24)
+            ul.contacts__list
+              li.contacts__item
+                a.contacts__link.link(href="tel:+73452971979") +7 (3452) 971-979 Тюмень
+              li.contacts__item
+                a.contacts__link.link(href="tel:+79094971979") +7 (9044) 971-979 Регионы
+          .contacts__inner
+            +icon("icon-map-marker", 24, 24)
+            ul.contacts__list
+              li.contacts__item
+                p.contacts__text пн-сб 12:00-19:00
+              li.contacts__item
+                p.contacts__text вс Выходной
+          .contacts__inner
+            +icon("icon-email", 24, 24)
+            ul.contacts__list
+              li.contacts__item
+                a.contacts__link.link(href="mailto:100kovrov@gmail.com") 100kovrov@gmail.com
+          .contacts__inner
+            +icon("icon-icq-logo", 24, 24)
+            ul.contacts__list
+              li.contacts__item
+                p.contacts__text 377900090
+        .contacts__column.contacts__map-column
+          .contacts__mapbox(data-mapbox, data-map-center-coord-x="57.142643", data-map-center-coord-y="65.565796", data-pin-coord-x="57.142343", data-pin-coord-y="65.565796", data-zoom="17", data-map-pin="img/svg/map-pin.svg", data-width="66", data-height="101", data-alt="", data-header="Мастерская Автоковрик", data-body="г.Тюмень", data-footer="ул.Холодильная д.69")

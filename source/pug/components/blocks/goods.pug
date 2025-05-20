@@ -1,0 +1,286 @@
+mixin goods()
+  section.goods#materials(data-tabs='element1')
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.title-h2 Виды материалов
+      .goods__box.tabs(data-tabs='parent', data-price-tabs='price-parent', data-accordion-media='(max-width:767px)')
+        .tabs__controls.goods__tabs-controls(data-tabs='controls')
+          button.goods__tabs-control.tabs__control.is-active(type='button', data-tabs='control', data-price-tabs='price-control') Ворсовые коврики Оптима
+          button.goods__tabs-control.tabs__control(type='button', data-tabs='control', data-price-tabs='price-control') Ворсовые коврики Премиум
+          button.goods__tabs-control.tabs__control(type='button', data-tabs='control', data-price-tabs='price-control') Коврики EVA-MAT
+          button.goods__tabs-control.tabs__control(type='button', data-tabs='control',data-price-tabs='price-control') Ворсовые коврики Стандарт
+          button.goods__tabs-control.tabs__control(type='button', data-tabs='control', data-price-tabs='price-control') Полиуретановые коврики
+        .tabs__content(data-tabs='content')
+          .tabs__element#material-optima(data-tabs='element', data-price-tabs='price-element')
+            .goods__content
+              ul.goods__images-list.goods-gallery
+                - for (let i = 1; i <= 8; i++)
+                  li.goods__images-item
+                    a(href="img/content/optima-full-" + i + "-desktop.jpg", data-pswp-width="1280", data-pswp-height="960", aria-label="Открыть большое изображение")
+                      picture()
+                        source(type="image/webp", srcset="img/content/optima-" + i + "-mobile.webp")
+                        img(src="img/content/optima-" + i + "-mobile.jpg", width=300, height=225, alt="Ворсовые коврики оптиум " + i, loading="lazy")
+              +photoswipecontainer()
+              .goods__description
+                h3.title-h3.goods__title Категория автоковролина Оптима
+                p.goods__subtitle
+                  strong Ворсовые коврики на резиновой основе.
+                p.goods__text Тафтинговый материал серии UPT из полипропиленовой нити одиночной крутки с высотой ворса 8 мм плотностью 850 г/м2.
+                ul.goods__ch-main-list
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Высота ворса
+                    span.goods__ch-main-value — 8 мм.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Материал ворса
+                    span.goods__ch-main-value — полипропилен.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Покрытие тыльной стороны
+                    span.goods__ch-main-value — выполнен из TPR (термо-пластичная резина).
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет материала
+                    span.goods__ch-main-value — ЧЕРНЫЙ, СЕРЫЙ, БЕЖЕВЫЙ.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет окантовки
+                    span.goods__ch-main-value — Черный, красный, синий, зеленый, серый, бежевый, коричневый, оранжевый.
+
+                p.goods__text
+                  strong Основное преимущество
+                  | — повышенная прочность, термо – и износостойкость, гладкий и ровный слой плотного ворса,устойчивость к воздействию многих химических реагентов. Не гниет и не выделяет никаких запахов, находясь в постоянно влажной среде. Имеет высокую степень пожаробезопасности, антистатичен.
+
+                p.goods__text
+                  strong Предназначен
+                  | — для круглогодичной эксплуатации.
+
+                p.goods__text
+                  strong Срок выполнения заказа
+                  | 1-2 рабочих дня.
+
+                .goods__add-box
+                  p.goods__add-box-title Дополнительно:
+                  ul.goods__add-list
+                    li.goods__add-item — Оснащение коврика подпятником (накладка пластиковая), по желанию 650р.
+                    li.goods__add-item — Установка штатных креплений для ковров (если это предусмотрено производителем а\м) БЕСПЛАТНО.
+                    li.goods__add-item — Установка металлических логотипов с нанесенным изображением марки автомобиля, по желанию - 300 рублей шт.
+
+                .goods__price-box
+                  p.goods__price-title Стоимость комплекта ковров из материала Оптима составляет — 8600 рублей.
+                  p.goods__add-price * некоторые марки а\м требуют больших затрат материалов и попадают в исключения, на которые цена рассчитывается индивидуально
+                  p.goods__add-price ** более точную стоимость вы сможете узнать в мастерской или по телефону.
+
+          .tabs__element#material-prem(data-tabs='element', data-price-tabs='price-element')
+            .goods__content
+              ul.goods__images-list.goods-gallery
+                - for (let i = 1; i <= 8; i++)
+                  li.goods__images-item
+                    a(href="img/content/premium-full-" + i + "-desktop.jpg", data-pswp-width="2560", data-pswp-height="1920", aria-label="Открыть большое изображение")
+                      picture()
+                        source(type="image/webp", srcset="img/content/premium-" + i + "-mobile.webp")
+                        img(src="img/content/premium-" + i + "-mobile.jpg", width=300, height=225, alt="Ворсовые коврики премиум " + i, loading="lazy")
+              +photoswipecontainer()
+              .goods__description
+                h3.title-h3.goods__title Категория автоковролина Премиум
+                p.goods__subtitle
+                  strong Ворсовые коврики на резиновой основе.
+                p.goods__text Тафтинговый материал серии UPT из полипропиленовой нити двойной крутки с высотой ворса 11 мм плотностью 1100 г/м2.
+                ul.goods__ch-main-list
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Высота ворса
+                    span.goods__ch-main-value — 11 мм.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Материал ворса
+                    span.goods__ch-main-value — полипропилен.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Покрытие тыльной стороны
+                    span.goods__ch-main-value — выполнен из TPR (термо-пластичная резина).
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет материала
+                    span.goods__ch-main-value — СЕРЫЙ (графит), БЕЖЕВЫЙ.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет окантовки
+                    span.goods__ch-main-value — Черный, красный, синий, зеленый, серый, бежевый, коричневый, оранжевый.
+
+                p.goods__text
+                  strong Основное преимущество
+                  | — повышенная прочность, термо – и износостойкость, гладкий и ровный слой плотного ворса,устойчивость к воздействию многих химических реагентов. Не гниет и не выделяет никаких запахов, находясь в постоянно влажной среде. Имеет высокую степень пожаробезопасности, антистатичен.
+
+                p.goods__text
+                  strong Предназначен
+                  | — для круглогодичной эксплуатации.
+
+                p.goods__text
+                  strong Срок выполнения заказа
+                  | 1-2 рабочих дня.
+
+                .goods__add-box
+                  p.goods__add-box-title Дополнительно:
+                  ul.goods__add-list
+                    li.goods__add-item — Оснащение коврика подпятником (накладка пластиковая), по желанию 650р.
+                    li.goods__add-item — Установка штатных креплений для ковров (если это предусмотрено производителем а\м) БЕСПЛАТНО.
+                    li.goods__add-item — Установка металлических логотипов с нанесенным изображением марки автомобиля, по желанию - 300 рублей шт.
+
+                .goods__price-box
+                  p.goods__price-title Стоимость комплекта ковров из материала ПРЕМИУМ составляет — 12800 рублей.
+                  p.goods__add-price * некоторые марки а\м требуют больших затрат материалов и попадают в исключения, на которые цена рассчитывается индивидуально
+                  p.goods__add-price ** более точную стоимость вы сможете узнать в мастерской или по телефону.
+
+          .tabs__element#material-eva(data-tabs='element', data-price-tabs='price-element')
+            .goods__content
+              ul.goods__images-list.goods-gallery
+                - for (let i = 1; i <= 8; i++)
+                  li.goods__images-item
+                    a(href="img/content/eva-full-" + i + "-desktop.jpg", data-pswp-width="1280", data-pswp-height="960", aria-label="Открыть большое изображение")
+                      picture()
+                        source(type="image/webp", srcset="img/content/eva-" + i + "-mobile.webp")
+                        img(src="img/content/eva-" + i + "-mobile.jpg", width=300, height=225, alt="Автоковрики из материала EVA " + i, loading="lazy")
+              +photoswipecontainer()
+              .goods__description
+                h3.title-h3.goods__title Материал EVA
+                p.goods__subtitle
+                  strong Коврики из материала ЭтиленВинилАцетат.
+                p.goods__text Иглопробивной (нетканый) по способу производства материал с плотностью 530 г\м2, изготавливается из волокон PET (полиэфирное волокно).
+                ul.goods__ch-main-list
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Толщина материала
+                    span.goods__ch-main-value — 10 мм.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Состав материала
+                    span.goods__ch-main-value — ЭтиленВинилАцетат.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет материала
+                    span.goods__ch-main-value — ЧЕРНЫЙ, СЕРЫЙ.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет окантовки
+                    span.goods__ch-main-value — Черный, красный, синий, зеленый, серый, бежевый, коричневый, оранжевый.
+
+                p.goods__text
+                  strong Основное преимущество
+                  | — Ковры надежно удерживают жидкость. У грязи не будет возможности расплескиваться во время движения и пачкать обувь, брюки водителю или пассажирам. Чтобы вылить жидкость, коврик необходимо перевернуть вертикально. Помимо этого, материал достаточно жесткий и легко вынимается из салона для чистки.
+
+                p.goods__text
+                  strong Предназначен
+                  | — для круглогодичной эксплуатации.
+
+                p.goods__text
+                  strong Срок выполнения заказа
+                  | 1-2 рабочих дня.
+
+                .goods__add-box
+                  p.goods__add-box-title Дополнительно:
+                  ul.goods__add-list
+                    li.goods__add-item — Оснащение коврика подпятником (накладка пластиковая), по желанию 650р.
+                    li.goods__add-item — Установка штатных креплений для ковров (если это предусмотрено производителем а\м) БЕСПЛАТНО.
+                    li.goods__add-item — Установка металлических логотипов с нанесенным изображением марки автомобиля, по желанию - 300 рублей шт.
+
+                .goods__price-box
+                  p.goods__price-title Стоимость комплекта ковров из материала Оптима составляет — 3300 рублей.
+                  p.goods__add-price * некоторые марки а\м требуют больших затрат материалов и попадают в исключения, на которые цена рассчитывается индивидуально
+                  p.goods__add-price ** более точную стоимость вы сможете узнать в мастерской или по телефону.
+
+          .tabs__element#material-std(data-tabs='element',data-price-tabs='price-element')
+            .goods__content
+              ul.goods__images-list.goods-gallery
+                - for (let i = 1; i <= 8; i++)
+                  li.goods__images-item
+                    a(href="img/content/standard-full-" + i + "-desktop.jpg", data-pswp-width="1920", data-pswp-height="1440", aria-label="Открыть большое изображение")
+                      picture()
+                        source(type="image/webp", srcset="img/content/standard-" + i + "-mobile.webp")
+                        img(src="img/content/standard-" + i + "-mobile.jpg", width=300, height=225, alt="Ворсовые коврики эконом " + i, loading="lazy")
+              +photoswipecontainer()
+              .goods__description
+                h3.title-h3.goods__title Категория автоковролина Эконом
+                p.goods__subtitle
+                  strong Ворсовые коврики на резиновой основе.
+                p.goods__text Иглопробивной (нетканый) по способу производства материал с плотностью 530 г\м2, изготавливается из волокон PET (полиэфирное волокно).
+                ul.goods__ch-main-list
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Высота ворса
+                    span.goods__ch-main-value — 3 мм.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Материал ворса
+                    span.goods__ch-main-value — полипропилен.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Покрытие тыльной стороны
+                    span.goods__ch-main-value — ПВХ покрытие.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет материала
+                    span.goods__ch-main-value — Черный ворс, оборотная сторона ПВХ.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет окантовки
+                    span.goods__ch-main-value — Черный, красный, синий, зеленый, серый, бежевый, коричневый, оранжевый.
+
+                p.goods__text
+                  strong Основное преимущество этого автоковролина
+                  | — низкая цена, наличие подложки из ПВХ.
+
+                p.goods__text
+                  strong Предназначен
+                  | — для круглогодичной эксплуатации.
+
+                p.goods__text
+                  strong Срок выполнения заказа
+                  | 1-2 рабочих дня.
+
+                .goods__add-box
+                  p.goods__add-box-title Дополнительно:
+                  ul.goods__add-list
+                    li.goods__add-item — Оснащение коврика подпятником (накладка пластиковая), по желанию 650р.
+                    li.goods__add-item — Установка штатных креплений для ковров (если это предусмотрено производителем а\м) БЕСПЛАТНО.
+                    li.goods__add-item — Установка металлических логотипов с нанесенным изображением марки автомобиля, по желанию - 300 рублей шт.
+
+                .goods__price-box
+                  p.goods__price-title Стоимость комплекта ковров из материала Оптима составляет — 3300 рублей.
+                  p.goods__add-price * некоторые марки а\м требуют больших затрат материалов и попадают в исключения, на которые цена рассчитывается индивидуально
+                  p.goods__add-price ** более точную стоимость вы сможете узнать в мастерской или по телефону.
+
+          .tabs__element#material-poly(data-tabs='element', data-price-tabs='price-element')
+            .goods__content
+              ul.goods__images-list.goods-gallery
+                - for (let i = 1; i <= 4; i++)
+                  li.goods__images-item
+                    a(href="img/content/polyurethane-full-" + i + "-desktop.jpg", data-pswp-width="1000", data-pswp-height="1000", aria-label="Открыть большое изображение")
+                      picture()
+                        source(type="image/webp", srcset="img/content/polyurethane-" + i + "-mobile.webp")
+                        img(src="img/content/polyurethane-" + i + "-mobile.jpg", width=300, height=225, alt="Полиуретановые автоковрики " + i, loading="lazy")
+              +photoswipecontainer()
+              .goods__description
+                h3.title-h3.goods__title Полиуретановые коврики в Салон и Багажник
+                p.goods__subtitle
+                  strong Производитель
+                  | — г. Санкт-Петербург
+                ul.goods__ch-main-list
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Коврики из материала
+                    span.goods__ch-main-value — полиуретан.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Состав материала
+                    span.goods__ch-main-value — Изготавливаются из современного композитного материала — EPDM + PP.
+                  li.goods__ch-main-item
+                    span.goods__ch-main-title Цвет материала
+                    span.goods__ch-main-value — Черный.
+
+                p.goods__text
+                  strong Основное преимущество
+                  | — Материал эластичный и износостойкий, сочетает лучшие качества каучука и полимера.
+
+                .goods__add-box
+                  p.goods__add-box-title Преимущества полиуретановых ковриков:
+                  ul.goods__add-list
+                    li.goods__add-item — вес полиуретановых ковриков гораздо меньше ковриков резиновых;
+                    li.goods__add-item — ковры очень просты в уходе;
+                    li.goods__add-item — коврики из полиуретана имеют бортики высотой до 3 см, полностью защищают половое покрытие от вытекания воды или грязи;
+                    li.goods__add-item — обладает повышенной гибкостью и стоек к температурным перепадам;
+                    li.goods__add-item — выпускается в большом ассортименте размеров и форм.
+
+                p.goods__text Вывод: — выбирая коврик, прислушивайтесь к своим пристрастиям и финансовым возможностям.
+
+                p.goods__text
+                  strong Предназначен
+                  | — для круглогодичной эксплуатации.
+
+                p.goods__text
+                  strong Срок выполнения заказа
+                  | 1-2 рабочих дня.
+
+                .goods__price-box
+                  p.goods__price-title Стоимость ковриков на свою модель а\м уточняйте в мастерской или по телефону.

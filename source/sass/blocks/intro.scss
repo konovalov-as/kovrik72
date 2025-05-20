@@ -1,0 +1,241 @@
+.intro {
+  position: relative;
+  //height: 100vh;
+
+  padding-top: 180px;
+  padding-bottom: 140px;
+  background-color: $color-blackcurrant;
+  background-image: url("../img/content/bg-intro-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    background: rgba(0, 0, 0, 0.5);
+    //backdrop-filter: blur(5px);
+    z-index: 1;
+  }
+
+  @include retina {
+    //background-image: url("../img/content/bg-intro-desktop@2x.webp");
+    //background-size: 575px;
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/content/bg-intro-tablet.jpg");
+  }
+
+  @include vp-767 {
+    background-image: url("../img/content/bg-intro-mobile.jpg");
+  }
+
+  &__wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: $color-default-white;
+    text-align: right;
+    z-index: 2;
+
+    @include vp-1023 {}
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: right;
+    margin: 0;
+    margin-bottom: 25px;
+
+    @include vp-767 {
+      text-transform: none;
+    }
+  }
+
+  &__contacts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+
+  &__contacts-item {
+    margin-bottom: 5px;
+
+    @include vp-767 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__contacts-link {
+    display: inline-flex;
+    color: $color-default-white;
+    font-size: 24px;
+    line-height: 1.1;
+    transition: text-shadow $trans-default, color $trans-default, outline $trans-default, outline-offset $trans-default;
+
+    &:hover,
+    &:focus {
+      color: $color-columbia-blue;
+      text-shadow: 0 2px 3px rgba(0,0,0,30%);
+    }
+
+    &:focus {
+      outline: 2px solid $color-gold;
+      outline-offset: 2px;
+      border-radius: 1px;
+    }
+
+    &:active {
+      color: $color-summer-sky-2;
+    }
+
+    @include vp-767 {}
+  }
+
+  &__contacts-link-2 {
+    display: inline-flex;
+    color: $color-maya-blue;
+    font-size: 14px;
+    line-height: 1.1;
+    //text-align: left;
+    min-width: 101px;
+    margin-left: 10px;
+    vertical-align: super;
+    border-bottom: 1px solid transparent;
+    transition: text-shadow $trans-default, color $trans-default, outline $trans-default, outline-offset $trans-default;
+
+    &:hover,
+    &:focus {
+      color: $color-columbia-blue;
+      text-shadow: 0 2px 3px rgba(0,0,0,30%);
+    }
+
+    &:focus {
+      outline: 2px solid $color-gold;
+      outline-offset: 2px;
+      border-radius: 1px;
+    }
+
+    &:active {
+      color: $color-summer-sky-2;
+    }
+  }
+
+  &__contacts-label {
+    display: inline-flex;
+    font-size: 14px;
+    line-height: 1.1;
+    padding-left: 10px;
+    vertical-align: super;
+    min-width: 110px;
+
+    @include vp-767 {
+      display: block;
+      width: 100%;
+      padding-left: 0;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  &__contacts-text {
+    display: inline-flex;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 1.2;
+
+    @include vp-1023 {
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  &__price-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__price-item {
+    margin-bottom: 10px;
+
+    @include vp-767 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__price-link {
+    display: inline-flex;
+    vertical-align: baseline;
+    font-size: 24px;
+    line-height: 1.1;
+    color: $color-maya-blue;
+    transition: text-shadow $trans-default, color $trans-default, outline $trans-default, outline-offset $trans-default;
+
+    &:hover,
+    &:focus {
+      color: $color-columbia-blue;
+      text-shadow: 0 2px 3px rgba(0,0,0,30%);
+    }
+
+    &:focus {
+      outline: 2px solid $color-gold;
+      outline-offset: 2px;
+      border-radius: 1px;
+    }
+
+    &:active {
+      color: $color-summer-sky-2;
+    }
+  }
+
+  &__price-text {
+    display: inline-flex;
+    font-size: 14px;
+    vertical-align: super;
+    padding-left: 10px;
+    min-width: 65px;
+
+    @include vp-767 {
+      display: block;
+      width: 100%;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+
+  &__mask {
+    display: flex;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    & svg {
+      height: 90px;
+      width: 100%;
+      fill: $color-default-white;
+    }
+  }
+}

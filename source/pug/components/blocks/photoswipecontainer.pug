@@ -1,0 +1,21 @@
+mixin photoswipecontainer()
+  //- PhotoSwipe container (required in DOM)
+  .pswp(tabindex="-1" role="dialog" aria-hidden="true")
+    .pswp__bg
+    .pswp__scroll-wrap
+      .pswp__container
+        .pswp__item
+        .pswp__item
+        .pswp__item
+      .pswp__ui.pswp__ui--hidden
+        .pswp__top-bar
+          .pswp__counter
+          button.pswp__button.pswp__button--close
+          button.pswp__button.pswp__button--zoom
+          .pswp__preloader
+            .pswp__preloader__icn
+        .pswp__share-modal.pswp__share-modal--hidden
+        button.pswp__button.pswp__button--arrow--left
+        button.pswp__button.pswp__button--arrow--right
+        .pswp__caption
+          .pswp__caption__center

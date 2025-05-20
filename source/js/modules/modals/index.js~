@@ -1,0 +1,76 @@
+export const initModalTest = () => {
+  // Модальные окна
+  const modalButtons = document.querySelectorAll('[data-modal]');
+  const modals = document.querySelectorAll('.modal');
+  const closeButtons = document.querySelectorAll('.modal__close');
+
+  // Открытие модального окна
+  modalButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalId = button.getAttribute('data-modal') + '-modal';
+      const modal = document.getElementById(modalId);
+
+      if (modal) {
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
+        modal.classList.add('active');
+
+        // Блокируем скролл контента за модалкой
+        document.addEventListener('wheel', preventScroll, { passive: false });
+      }
+    });
+  });
+
+  // Функция для предотвращения скролла
+  function preventScroll(e) {
+    if (!e.target.closest('.modal__content')) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  }
+
+  // Закрытие модального окна
+  function closeModal() {
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+    modals.forEach(modal => {
+      modal.classList.remove('active');
+    });
+    document.removeEventListener('wheel', preventScroll);
+  }
+
+  // Закрытие по кнопке
+  closeButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal();
+    });
+  });
+
+  // Закрытие по клику на оверлей
+  modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.classList.contains('modal__overlay')) {
+        closeModal();
+      }
+    });
+  });
+
+  // Закрытие по ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+
+  // Предотвращаем закрытие при клике внутри контента
+  document.querySelectorAll('.modal__content').forEach(content => {
+    content.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  });
+};
+
+

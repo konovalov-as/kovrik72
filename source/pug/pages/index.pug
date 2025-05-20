@@ -1,0 +1,40 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Мастерская Автоковрик — Пошив автоковриков на заказ — Индивидуальный пошив ворсовых и EVA автоковриков для всех моделей автомобилей. Работаем с 2013 года. Доставка по России и СНГ." //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +intro()
+    +goods()
+    +order()
+    +faq()
+    +contacts()
+    +other-goods()
+    +about()
+
+block modals
+
+  //- Для корректной работы Yandex JavaScript API необходимо указать параметр HTTP Referer для ключей: Key #1.
+  //- 44c2d6f7-48e3-4089-894e-b8863ee921f1
+  script(src="https://api-maps.yandex.ru/v3/?apikey=44c2d6f7-48e3-4089-894e-b8863ee921f1&lang=ru_RU", async)
+  script(src="https://code.jivo.ru/widget/jW7LEPoUtC", async)
+
+  script(type="text/javascript", src="https://vk.com/js/api/openapi.js?169", async)
+  //- VK Widget
+  div#vk_community_messages
+  script(type="text/javascript").
+    VK.Widgets.CommunityMessages("vk_community_messages", 56067637, {
+      expandTimeout: "10000",
+      disableExpandChatSound: "1",
+      widgetPosition: "left",
+      tooltipButtonText: "Есть вопрос?"
+    });

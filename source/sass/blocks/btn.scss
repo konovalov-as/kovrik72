@@ -1,0 +1,46 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  color: $color-default-white;
+  background-color: $color-picton-blue;
+  border: 1px solid $color-picton-blue;
+  text-transform: uppercase;
+  border-radius: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color $trans-default;
+
+  &--red {
+    background-color: $color-torch-red;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  //@include hover-focus {
+  //  background-color: $color-curious-blue;
+  //  //outline: 2px solid rgba($color-picton-blue, 50%);
+  //}
+
+  &:hover,
+  &:focus {
+    background-color: $color-curious-blue;
+    //outline: 2px solid rgba($color-picton-blue, 50%);
+  }
+
+  &:active {
+    background-color: $color-lochmara;
+  }
+
+  @include vp-1023 {
+    font-size: 16px;
+  }
+}
+
+
+
+

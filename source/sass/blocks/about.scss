@@ -1,0 +1,44 @@
+.about {
+  color: $color-night-rider;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &:before {
+      content: '';
+      width: 12px;
+      height: 1px;
+      background-color: $color-silver;
+      margin-right: 4px;
+    }
+  }
+
+  &__contact-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact-label {
+    font-weight: bold;
+    margin: 0;
+    margin-right: 4px;
+  }
+}

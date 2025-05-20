@@ -1,0 +1,17 @@
+.title-h2 {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 1.2;
+  color: $color-default-black;
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+  }
+}

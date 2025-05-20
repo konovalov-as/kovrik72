@@ -1,0 +1,171 @@
+mixin other-goods()
+  section.other-goods#othergoods
+    //- вставлять блоки во внешний контейнер неверно
+    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .container
+      h2.title-h2.other-goods__title Прочие товары
+      .accordion(data-accordion="parent").faq
+        .accordion__element.faq__accordion-element(data-accordion="element")
+          button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+            +icon("icon-chevron-right", 24, 24)
+            | Утеплитель двигателя
+          .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+            .accordion__wrapper
+              p.other-goods__subtitle Мастерская Автоковрик является производителем утеплителей для двигателя, собственное производство позволяет сохранить отличное качество по доступной цене.
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Об утеплителе для двигателя
+                p.other-goods__element-text Утеплитель для двигателя — это в своем роде одеяло для машины, которым накрывают двигатель, сохраняя тепло создаваемое самим двигателем в процессе работы.
+                p.other-goods__element-text Благодаря материалам из которых изготовлен утеплитель тепло не может устремиться наружу. При этом перегрев двигателя, чего боятся хозяева железных коней опасаются, исключается.
+
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Основные преимущества
+                ul.other-goods__list
+                  li.other-goods__item Не горючие! Огнестойкие материалы.
+                  li.other-goods__item Прост в установке.
+                  li.other-goods__item Экологически чистый.
+                  li.other-goods__item Сохраняет ресурс двигателя, обеспечив рабочую температуру двигателя.
+                  li.other-goods__item Экономия топлива на длительных прогревах авто.
+                  li.other-goods__item Дополнительная шумоизоляция подкапотного пространства.
+
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Цены
+                ul.other-goods__list
+                  li.other-goods__item  Размер малый 125*60 см — 1 100 рублей
+                  li.other-goods__item  Размер малый 140*80 см — 1 200 рублей
+                  li.other-goods__item  Размер малый 150*90 см — 1 250 рублей
+                p *размер подходящий на Ваш а\м уточняйте у продавца
+
+              .other-goods__inner
+                ul.other-goods__images-list.goods-gallery
+                  - for (let i = 1; i <= 3; i++)
+                    li.other-goods__images-item
+                      a.other-goods__images-linlk(href="img/content/insulation-full-" + i + "-desktop.jpg", data-pswp-width="600" data-pswp-height="449", aria-label="Открыть большое изображение")
+                        picture()
+                          source(type="image/webp", srcset="img/content/insulation-" + i + "-mobile.webp")
+                          img(src="img/content/insulation-" + i + "-mobile.jpg", width=300, height=225, alt="Утеплитель двигателя " + i, loading="lazy")
+                +photoswipecontainer()
+
+        .accordion__element.faq__accordion-element(data-accordion="element")
+          button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+            +icon("icon-chevron-right", 24, 24)
+            | Сумка в багажник
+          .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+            .accordion__wrapper
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Сумка органайзер в багажник
+                p.other-goods__element-text Сумка выполнена из прочного материала на основе ПВД.
+                p.other-goods__element-text Сумка хорошо держит форму и не промокает.
+                p.other-goods__element-text За счет обработки различными цветными кантами придается индивидуальный облик.
+                p.other-goods__element-text Удобные ручки по краям сумки.
+                p.other-goods__element-text Контактная лента (липучка) шириной 5см с оборотной стороны сумки для крепления к обшивке багажного отделения.
+                p.other-goods__element-text В сумке уместится огнетушитель, знак аварийной остановки, аптечка и много различной мелочи так необходимой водителю.
+
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Размеры сумки
+                ul.other-goods__list
+                  li.other-goods__item Длина 50см
+                  li.other-goods__item Ширина 15см
+                  li.other-goods__item Высота 25см
+                p * возможно изготовить сумку по вашим размерам
+
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Цены
+                ul.other-goods__list
+                  li.other-goods__item Стоимость стандартного размера — 1 200 рублей за шт.
+                p * стоимость нестандартного размера уточняйте у мастера мастерской
+
+              .other-goods__inner
+                ul.other-goods__images-list.goods-gallery
+                  - for (let i = 1; i <= 3; i++)
+                    li.other-goods__images-item
+                      a.other-goods__images-linlk(href="img/content/trunk-bag-full-" + i + "-desktop.jpg", data-pswp-width="1024" data-pswp-height="768", aria-label="Открыть большое изображение")
+                        picture()
+                          source(type="image/webp", srcset="img/content/trunk-bag-" + i + "-mobile.webp")
+                          img(src="img/content/trunk-bag-" + i + "-mobile.jpg", width=300, height=225, alt="Сумка органайзер " + i, loading="lazy")
+                +photoswipecontainer()
+
+        .accordion__element.faq__accordion-element(data-accordion="element")
+          button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+            +icon("icon-chevron-right", 24, 24)
+            | Меховые накидки
+          .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+            .accordion__wrapper
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Описание
+                p.other-goods__element-text Короткошерстная меховая накидка (чехол) на сиденье для автомобиля.
+                p.other-goods__element-text Накидки сделаны из очень плотного и приятного на ощупь меха, прекрасно вписываются в интерьер салона любого автомобиля.
+                p.other-goods__element-text В суровую зиму (особенно!!!) для кожаного салона меховые накидки просто необходимы, т.к. длительное время использовать подогрев сидений вредно для здоровья.
+                p.other-goods__element-text Наши накидки — отличный вариант подарка любому автомобилисту.
+
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Преимущества
+                ul.other-goods__list
+                  li.other-goods__item комфорт в вашем автомобиле
+                  li.other-goods__item придают еще более более стильный и эстетичный вид салону автомобиля
+                  li.other-goods__item высокие теплоизолирующий! и абсорбирующие! свойства материала
+                  li.other-goods__item защищают сидения от истирания
+                  li.other-goods__item делают сидения более мягким, а вождение более комфортным!
+
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Характеристики
+                ul.other-goods__list
+                  li.other-goods__item Меховая накидка с обратной стороны имеет противостоящий слой материала
+                  li.other-goods__item Мех: короткошерстный искусственный под мутон
+                  li.other-goods__item Крепления: универсальные, подходят на любой автомобиль (см. Фото)
+                  li.other-goods__item Цвета: Черный, Белый, Бежевый, Коричневый
+                  li.other-goods__item Размер: длина — 145см, ширина — 55см
+
+              .other-goods__inner
+                p.other-goods__element-title Уход: для очистки и удаления пятен необходима химчистка. Меховые накидки не рекомендуется стирать, т.к они теряют форму (становятся меньше по размеру)
+                p.other-goods__element-title Важно знать!!! На рынке сейчас продаётся много более дешёвых накидок. Такие накидки как правило изготовлены из некачественных материалов
+                p.other-goods__element-title Комплект: 1 шт
+
+              .other-goods__inner
+                p.other-goods__element-title
+                  strong Цены
+                ul.other-goods__list
+                  li.other-goods__item Накидки продаются поштучно — 2 600 рублей.
+                p * стоимость нестандартного размера уточняйте у мастера мастерской
+
+              .other-goods__inner
+                ul.other-goods__images-list.goods-gallery
+                  - for (let i = 1; i <= 5; i++)
+                    li.other-goods__images-item
+                      a.other-goods__images-linlk(href="img/content/fur-capes-full-" + i + "-desktop.jpg", data-pswp-width="1024" data-pswp-height="786", aria-label="Открыть большое изображение")
+                        picture()
+                          source(type="image/webp", srcset="img/content/fur-capes-" + i + "-mobile.webp")
+                          img(src="img/content/fur-capes-" + i + "-mobile.jpg", width=300, height=222, alt="Меховые накидки " + i, loading="lazy")
+                +photoswipecontainer()
+
+        .accordion__element.faq__accordion-element(data-accordion="element")
+          button.accordion__button.faq__accordion-btn.faq__accordion-btn--border(type="button", data-accordion="button")
+            +icon("icon-chevron-right", 24, 24)
+            | Подарочные сертификаты
+          .accordion__content.faq__accordion-content.faq__accordion-content--border(data-accordion="content")
+            .accordion__wrapper
+              .other-goods__inner
+                p.other-goods__element-text Мастерская Автоковрик г.Тюмень предлагает сделать замечательный подарок вашему близкому.
+                p.other-goods__element-text Обладатель подарочного сертификата при заказе автомобильных ковриков сможет самостоятельно выбрать: тип материала, цвет материала, цвет окантовки а также дополнительную фурнитуру.
+                p.other-goods__element-text Заказ можно оформить как на один (коврик водителя), так и полный комплект ковров в салон автомобиля, тем самым обновить свой автомобиль и сделать его эксплуатацию более практичной.
+                p.other-goods__element-text Сертификат выполнен на бумаге «крафт» с нанесением сургучной печати с гравировкой, приятный и полезный подарок.
+                p.other-goods__element-text Говорят о вкусах не спорят, потому подарите возможность обладателю сертификата сделать выбор самостоятельно.
+                p.other-goods__element-text Мы можем изготовить сертификат на любую сумму, рекомендуемые номиналы – 1000, 1500, 2000, 2500, 3000, 4000 рублей.
+
+              .other-goods__inner
+                ul.other-goods__images-list.goods-gallery
+                  - for (let i = 1; i <= 3; i++)
+                    li.other-goods__images-item
+                      a.other-goods__images-linlk(href="img/content/gift-certificates-full-" + i + "-desktop.jpg", data-pswp-width="800" data-pswp-height="598", aria-label="Открыть большое изображение")
+                        picture()
+                          source(type="image/webp", srcset="img/content/gift-certificates-" + i + "-mobile.webp")
+                          img(src="img/content/gift-certificates-" + i + "-mobile.jpg", width=247, height=300, alt="Подарочный сертификат " + i, loading="lazy")
+                +photoswipecontainer()

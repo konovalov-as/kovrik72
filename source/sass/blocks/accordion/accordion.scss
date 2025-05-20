@@ -1,0 +1,31 @@
+.accordion {
+  margin: 0 auto 0 auto;
+
+  & & {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element:last-child {
+    margin-bottom: 0;
+  }
+
+  &__element {
+    margin-bottom: 2px;
+    padding: 10px;
+  }
+
+  &__element.is-active > &__button {
+    //opacity: 0.5;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    padding: 10px;
+  }
+}

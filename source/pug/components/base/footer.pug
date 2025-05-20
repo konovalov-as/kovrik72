@@ -1,0 +1,27 @@
+mixin footer(footerMods)
+  footer.footer(class=footerMods).contacts
+    .container
+      .footer__row
+        .footer__column
+          +icon("icon-map-marker", 40, 40)
+          p.footer__text Россия г.Тюмень ул.Холодильная д.69
+        .footer__column
+          +icon("icon-email", 40, 40)
+          a.contacts__link.footer__contact-link(href="mailto:100kovrov@gmail.com") 100kovrov@gmail.com
+        .footer__column
+          +icon("icon-phone", 40, 40)
+          ul.contacts__list
+            li.contacts__item
+              a.contacts__link.footer__contact-link(href="tel:+73452971979") +7 (3452) 971-979 Тюмень
+            li.contacts__item
+              a.contacts__link.footer__contact-link(href="tel:+79094971979") +7 (9044) 971-979 Регионы
+        .footer__column
+          +icon("icon-vk", 60, 32)
+          a.contacts__link.footer__contact-link(href="https://vk.com/kovrik72ru") kovrik72ru
+
+      .footer__row.footer__row--about
+        .footer__copyright
+          p.footer__copyright-text © 2013 - 2025  Все права защищены. Мастерская Автоковрик
+
+        .footer__law
+          p.footer__law-text ИНН 11111111 ОГРН 222222222

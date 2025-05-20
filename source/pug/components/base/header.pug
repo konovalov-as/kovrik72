@@ -1,0 +1,52 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#materials",
+        text: "О материалах"
+      },
+      {
+        href: "#order",
+        text: "Сделать заказ"
+      },
+      {
+        href: "#faq",
+        text: "Вопросы и ответы"
+      },
+      {
+        href: "#contacts",
+        text: "Контакты"
+      },
+      {
+        href: "#othergoods",
+        text: "Дополнительные товары"
+      },
+      {
+        href: "#about",
+        text: "О нас"
+      },
+    ]
+
+  header.header(class=headerMods, data-header="sticky", data-scroll-lock-fill-gap, data-hide-point="50").header--sticky
+    .container
+      if(currentUrl === "index.html")
+        //- lighthouse снимает 10 баллов SEO за <a> без href
+        span.header__logo.logo Мастерская Автоковрик
+          //img(src="img/content/logo.jpg", width="120", alt="Логотип проекта")
+      else
+        a.header__logo.logo(href="index.html", aria-label="Переход на главную") Мастерская Автоковрик
+          //img(src="img/content/logo.jpg", width="120", alt="Логотип проекта")
+
+      nav.header__nav.main-nav(data-main-nav="menu")
+        ul.main-nav__list.header__list
+          each link in headerLinks
+            - const activeState = currentUrl === link.href
+            li.main-nav__item.header__item
+              if(activeState)
+                span.main-nav__link.header__link.is-active= link.text
+              else
+                a.main-nav__link.header__link(href=link.href, data-man-nav="link", data-smooth="scroll")= link.text
+
+      button.btn-reset.header__burger(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-burger)
+        +icon("icon-nav-menu", 24, 24).header__burger-text
+        +icon("icon-close", 24, 24).header__burger-icon

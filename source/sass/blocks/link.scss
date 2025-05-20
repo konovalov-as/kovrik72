@@ -1,0 +1,16 @@
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  color: $color-cobalt;
+  transition: color $trans-default;
+
+  &:hover,
+  &:focus {
+    color: $color-sapphire;
+  }
+
+  &:active {
+    color: rgba($color-smalt, 70%);
+  }
+}
